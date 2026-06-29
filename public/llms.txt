@@ -18,8 +18,7 @@ workflows, and taking ideas from concept to working systems.
 ## Links
 - Portfolio: https://azaannoman.vercel.app
 - Email: azaannoman03@gmail.com
-- LinkedIn: https://linkedin.com/in/azaan
-- GitHub: https://github.com/azaan
+- GitHub: https://github.com/iecclodd
 - Instagram: https://instagram.com/iecclodd
 - Resume: https://azaannoman.vercel.app/resume.pdf
 
