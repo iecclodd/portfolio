@@ -32,24 +32,26 @@ export function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="flex items-center gap-4"
           >
-            <IntroAvatar />
             <StatusBadge tone="green" dot>
               Available for new projects
             </StatusBadge>
           </motion.div>
 
-          <motion.h1
+          {/* name + headshot, side by side */}
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.05 }}
-            className="mt-8 text-5xl font-bold leading-[0.95] tracking-tight text-foreground sm:text-6xl md:text-7xl"
+            className="mt-8 flex items-center gap-5 sm:gap-7"
           >
-            Azaan
-            <br />
-            Noman
-          </motion.h1>
+            <h1 className="text-5xl font-bold leading-[0.95] tracking-tight text-foreground sm:text-6xl md:text-7xl">
+              Azaan
+              <br />
+              Noman
+            </h1>
+            <IntroAvatar />
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 18 }}
@@ -164,7 +166,7 @@ function IntroAvatar() {
   }, []);
 
   return (
-    <span className="relative grid h-16 w-16 shrink-0 place-items-center overflow-hidden rounded-2xl border border-border bg-card shadow-[0_10px_24px_-16px_rgba(111,78,55,0.6)] ring-1 ring-accent-green/20">
+    <span className="relative grid h-28 w-28 shrink-0 place-items-center overflow-hidden rounded-3xl border border-border bg-card shadow-[0_18px_40px_-22px_rgba(111,78,55,0.5)] ring-1 ring-accent-green/25 sm:h-36 sm:w-36 md:h-40 md:w-40">
       {!failed ? (
         // eslint-disable-next-line @next/next/no-img-element
         <img
@@ -176,10 +178,15 @@ function IntroAvatar() {
         />
       ) : (
         <span
-          className="grid h-full w-full place-items-center bg-gradient-to-br from-card to-background text-accent-blue"
+          className="flex h-full w-full flex-col items-center justify-center gap-2 bg-gradient-to-br from-card to-background p-3 text-center text-accent-blue"
           title="Add public/photos/portrait.jpg"
         >
-          <ImagePlus className="h-5 w-5" />
+          <ImagePlus className="h-6 w-6" />
+          <span className="font-mono text-[0.6rem] leading-tight text-muted">
+            public/photos/
+            <br />
+            portrait.jpg
+          </span>
         </span>
       )}
     </span>
