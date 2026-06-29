@@ -1,0 +1,36 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__visualize__read_me",
+      "mcp__visualize__show_widget",
+      "Bash(command -v weasyprint)",
+      "Bash(command -v wkhtmltopdf)",
+      "Bash(command -v chromium)",
+      "Bash(command -v \"google-chrome\")",
+      "Read(//Applications/**)",
+      "Bash(python3 -c \"import weasyprint; print\\('weasyprint-py ok'\\)\")",
+      "Bash(\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\" --headless --disable-gpu --no-pdf-header-footer --print-to-pdf=\"heart-pump-model-guide.pdf\" \"file://$\\(pwd\\)/heart-pump-model-guide.html\")",
+      "Bash(python3 -c \"from pypdf import PdfReader; r=PdfReader\\('heart-pump-model-guide.pdf'\\); print\\('pages:',len\\(r.pages\\)\\); print\\(r.pages[0].extract_text\\(\\)[:200]\\)\")",
+      "Bash(command -v pdfinfo)",
+      "Bash(pdfinfo heart-pump-model-guide.pdf)",
+      "Bash(command -v mdls)",
+      "Bash(mdls -name kMDItemNumberOfPages heart-pump-model-guide.pdf)",
+      "WebFetch(domain:paxel.ycombinator.com)",
+      "Bash(npm -v)",
+      "Bash(pnpm -v)",
+      "Bash(node -e *)",
+      "Bash(npm run *)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(npm install *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:50548/)",
+      "Bash(curl -s http://localhost:50548/)",
+      "Bash(ls -la /Users/iecclodd/Desktop/beans/public/photos/ 2>/dev/null; echo \"---public---\"; ls -la /Users/iecclodd/Desktop/beans/public/; echo \"---recent images in common spots---\"; ls -lat ~/Downloads 2>/dev/null | head -5; find /private/tmp/claude-501 -type f \\\\\\( -name \"*.jpg\" -o -name \"*.png\" -o -name \"*.jpeg\" \\\\\\) 2>/dev/null | head)",
+      "Bash(find /private/tmp/claude-501 /Users/iecclodd/.claude -type f \\\\\\( -iname \"*.jpg\" -o -iname \"*.jpeg\" -o -iname \"*.png\" -o -iname \"*.webp\" \\\\\\) -newermt \"2026-06-29 11:00\" 2>/dev/null | head -20; echo \"done\")",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git branch *)",
+      "Bash(git remote *)"
+    ]
+  }
+}

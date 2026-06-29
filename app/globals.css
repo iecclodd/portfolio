@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f4ede2;
+  --card: #fbf6ec;
+  --border: #e6d7c3;
+  --foreground: #3a2a20;
+  --muted: #8c7a67;
+  --accent-blue: #6f4e37; /* espresso */
+  --accent-purple: #a9744c; /* caramel */
+  --accent-green: #7c9a3c; /* matcha */
+  --accent-red: #bc6a4b; /* terracotta */
+  --matcha: #7c9a3c;
+  --matcha-mist: #edf2de;
+  --matcha-soft: #d4e0b0;
+  --matcha-light: #9dba5a;
+  --matcha-deep: #5e7a2c;
+  --matcha-dark: #46591f;
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-feature-settings: "rlig" 1, "calt" 1;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+/* Warm coffee selection */
+::selection {
+  background: rgba(111, 78, 55, 0.18);
+  color: #3a2a20;
+}
+
+/* Scrollbar — warm latte */
+::-webkit-scrollbar {
+  width: 11px;
+  height: 11px;
+}
+::-webkit-scrollbar-track {
+  background: #f4ede2;
+}
+::-webkit-scrollbar-thumb {
+  background: #d8c5ac;
+  border-radius: 9999px;
+  border: 3px solid #f4ede2;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c2a988;
+}
+
+@layer utilities {
+  /* Subtle paper grain overlay */
+  .noise-overlay {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Espresso → caramel → matcha headline gradient */
+  .text-gradient {
+    background: linear-gradient(
+      115deg,
+      #3a2a20 0%,
+      #6f4e37 32%,
+      #a9744c 58%,
+      #7c9a3c 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Soft warm lift used on key cards */
+  .glow-coffee {
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) inset,
+      0 18px 40px -22px rgba(111, 78, 55, 0.4);
+  }
+
+  .glass {
+    background: rgba(251, 246, 236, 0.72);
+    backdrop-filter: blur(14px) saturate(150%);
+    -webkit-backdrop-filter: blur(14px) saturate(150%);
+  }
+}
