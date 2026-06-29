@@ -7,7 +7,7 @@
  */
 
 import type { LucideIcon } from "lucide-react";
-import { Mail, Linkedin, Github, FileDown } from "lucide-react";
+import { Mail, Linkedin, Github, Instagram, FileDown } from "lucide-react";
 
 export interface Channel {
   id: string;
@@ -45,6 +45,13 @@ export const contact = {
       value: "github.com/azaan",
       href: "https://github.com/azaan",
       icon: Github,
+    },
+    {
+      id: "instagram",
+      label: "Instagram",
+      value: "@iecclodd",
+      href: "https://instagram.com/iecclodd",
+      icon: Instagram,
     },
     {
       id: "resume",

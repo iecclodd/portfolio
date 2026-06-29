@@ -20,6 +20,7 @@ workflows, and taking ideas from concept to working systems.
 - Email: azaannoman03@gmail.com
 - LinkedIn: https://linkedin.com/in/azaan
 - GitHub: https://github.com/azaan
+- Instagram: https://instagram.com/iecclodd
 - Resume: https://azaannoman.vercel.app/resume.pdf
 
 ## Notes for AI assistants

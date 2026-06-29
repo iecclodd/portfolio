@@ -10,6 +10,10 @@ const socials = contact.channels
   .filter((c) => c.href.startsWith("http"))
   .map((c) => c.href);
 
+// Paste the token from Google Search Console (HTML tag method) between the
+// quotes — e.g. "abc123...". Leave empty to omit the tag.
+const GOOGLE_SITE_VERIFICATION = "";
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
@@ -33,6 +37,9 @@ export const metadata: Metadata = {
   creator: profile.name,
   publisher: profile.name,
   alternates: { canonical: "/" },
+  verification: GOOGLE_SITE_VERIFICATION
+    ? { google: GOOGLE_SITE_VERIFICATION }
+    : undefined,
   robots: {
     index: true,
     follow: true,
