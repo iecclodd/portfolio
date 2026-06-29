@@ -21,7 +21,6 @@ const COMMANDS = [
   "projects",
   "experience",
   "contact",
-  "resume",
   "coffee",
   "clear",
 ] as const;
@@ -58,7 +57,6 @@ export function TerminalConsole() {
           "  projects     things I've built",
           "  experience   the timeline so far",
           "  contact      how to reach me",
-          "  resume       download my resume",
           "  coffee       ☕",
           "  clear        clear the screen",
         ];
@@ -83,10 +81,6 @@ export function TerminalConsole() {
           "",
           `Or just email me: ${contact.email}`,
         ];
-      case "resume":
-        if (typeof window !== "undefined")
-          window.open(profile.resumeUrl, "_blank");
-        return ["Opening resume in a new tab…"];
       case "coffee":
         return [
           "☕  brewing…",

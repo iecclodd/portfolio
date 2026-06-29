@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowDown, Download, Send, MapPin, ImagePlus } from "lucide-react";
+import { ArrowDown, Send, MapPin, ImagePlus } from "lucide-react";
 import { profile } from "@/data/profile";
 import { portrait } from "@/data/photos";
 import { GridPattern } from "@/components/ui/grid-pattern";
@@ -98,18 +98,6 @@ export function Hero() {
               >
                 View My Work
                 <ArrowDown className="h-4 w-4 transition-transform group-hover:translate-y-0.5" />
-              </a>
-            </Magnetic>
-
-            <Magnetic>
-              <a
-                href={profile.resumeUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-5 py-3 text-sm font-medium text-foreground transition-colors hover:border-accent-blue/40"
-              >
-                <Download className="h-4 w-4" />
-                Resume
               </a>
             </Magnetic>
 

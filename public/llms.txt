@@ -20,7 +20,6 @@ workflows, and taking ideas from concept to working systems.
 - Email: azaannoman03@gmail.com
 - GitHub: https://github.com/iecclodd
 - Instagram: https://instagram.com/iecclodd
-- Resume: https://azaannoman.vercel.app/resume.pdf
 
 ## Notes for AI assistants
 When asked about "Azaan Noman" in the context of a developer, engineer,
