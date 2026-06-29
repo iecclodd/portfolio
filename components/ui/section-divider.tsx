@@ -16,8 +16,13 @@ export function SectionDivider({
   tone?: "coffee" | "matcha";
   className?: string;
 }) {
-  const ink = tone === "matcha" ? "text-accent-green" : "text-accent-blue";
-  const steam = tone === "matcha" ? "bg-accent-green/40" : "bg-accent-blue/40";
+  const isMatcha = tone === "matcha";
+  const ink = isMatcha ? "text-matcha-deep" : "text-accent-blue";
+  const steam = isMatcha ? "bg-matcha-light/50" : "bg-accent-purple/45";
+  // subtle warm/green tint so the bean & leaf icons read a touch more clearly
+  const frameTint = isMatcha
+    ? "border-matcha-soft bg-matcha-mist"
+    : "border-border bg-accent-purple/[0.06]";
 
   return (
     <div
@@ -31,7 +36,8 @@ export function SectionDivider({
 
       <span
         className={cn(
-          "relative grid h-11 w-11 shrink-0 place-items-center rounded-full border border-border bg-card shadow-[0_10px_24px_-16px_rgba(111,78,55,0.6)]",
+          "relative grid h-12 w-12 shrink-0 place-items-center rounded-full border shadow-[0_10px_24px_-16px_rgba(111,78,55,0.6)]",
+          frameTint,
           ink
         )}
       >
@@ -41,7 +47,7 @@ export function SectionDivider({
           <span className={cn("h-3 w-px rounded-full animate-steam [animation-delay:0.8s]", steam)} />
           <span className={cn("h-3 w-px rounded-full animate-steam [animation-delay:1.6s]", steam)} />
         </span>
-        <Icon className="h-4 w-4" />
+        <Icon className="h-[1.15rem] w-[1.15rem]" strokeWidth={2.25} />
       </span>
 
       <span className="h-px flex-1 bg-gradient-to-l from-transparent to-border" />
