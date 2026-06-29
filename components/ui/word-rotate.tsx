@@ -26,7 +26,7 @@ export function WordRotate({
 
   return (
     <span className="relative inline-grid overflow-hidden">
-      <AnimatePresence mode="popLayout">
+      <AnimatePresence mode="wait">
         <motion.span
           key={words[index]}
           initial={{ opacity: 0, y: "60%" }}

@@ -90,7 +90,7 @@ export function BusinessCard() {
                 animate={{ rotateY: flipped ? 180 : 0 }}
                 transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
                 style={{ transformStyle: "preserve-3d" }}
-                className="relative aspect-[1.7] w-full cursor-pointer"
+                className="relative aspect-[1.5] w-full cursor-pointer sm:aspect-[1.7]"
               >
                 <div className="absolute inset-0 [backface-visibility:hidden]">
                   <CardFront large />
@@ -153,13 +153,14 @@ function CardFront({
         className="pointer-events-none absolute inset-0 h-full w-full opacity-[0.5]"
         fill="none"
       >
+        {/* traces tucked into the top-right band — clear of the name, tagline & footer text */}
         <g stroke="#7C9A3C" strokeWidth="2" strokeLinecap="round" opacity="0.35">
-          <path d="M0 60 H70 L96 86 H150" />
-          <path d="M400 180 H320 L296 154 H250" />
-          <path d="M40 200 H120" />
+          <path d="M236 22 H300 L318 40 H400" />
+          <path d="M300 58 H352 L366 44" />
+          <path d="M400 30 H360" />
         </g>
-        <circle cx="150" cy="86" r="4" fill="#A9744C" opacity="0.4" />
-        <circle cx="250" cy="154" r="4" fill="#7C9A3C" opacity="0.4" />
+        <circle cx="300" cy="40" r="3.5" fill="#A9744C" opacity="0.45" />
+        <circle cx="352" cy="58" r="3.5" fill="#7C9A3C" opacity="0.45" />
       </svg>
 
       {/* top row: chip + brand */}
@@ -217,7 +218,7 @@ function CardFront({
 function CardBack() {
   return (
     <div className="relative flex h-full w-full flex-col overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-background to-card p-5 shadow-[0_24px_60px_-30px_rgba(111,78,55,0.55)] sm:p-6">
-      <div className="mb-3 flex items-center justify-between">
+      <div className="mb-3 flex shrink-0 items-center justify-between">
         <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent-green">
           Get in touch
         </p>
@@ -227,7 +228,7 @@ function CardBack() {
         </span>
       </div>
 
-      <div className="grid flex-1 content-center gap-2.5">
+      <div className="grid min-h-0 flex-1 content-center gap-2.5 overflow-y-auto [-webkit-overflow-scrolling:touch] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         {contact.channels.map((ch) => {
           const Icon = ch.icon;
           return (
@@ -251,7 +252,7 @@ function CardBack() {
       <a
         href={`mailto:${contact.email}`}
         onClick={(e) => e.stopPropagation()}
-        className="mt-3 inline-flex items-center justify-center gap-2 rounded-xl bg-accent-green px-4 py-2.5 text-sm font-semibold text-card transition-transform hover:scale-[1.01]"
+        className="mt-3 inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-accent-green px-4 py-2.5 text-sm font-semibold text-card transition-transform hover:scale-[1.01]"
       >
         Email me
         <ArrowUpRight className="h-4 w-4" />
