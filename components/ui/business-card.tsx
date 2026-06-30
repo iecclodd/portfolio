@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import { X, RotateCw, MapPin, Coffee, Leaf, ArrowUpRight } from "lucide-react";
+import { X, RotateCw, MapPin, Coffee, Leaf, Cherry, ArrowUpRight } from "lucide-react";
 import { profile } from "@/data/profile";
 import { contact } from "@/data/contact";
 import { cn } from "@/lib/utils";
@@ -169,6 +169,7 @@ function CardFront({
         <div className="flex items-center gap-1.5 font-mono text-xs text-muted">
           <Coffee className="h-3.5 w-3.5 text-accent-blue" />
           <Leaf className="h-3.5 w-3.5 text-accent-green" />
+          <Cherry className="h-3.5 w-3.5 text-strawberry" />
         </div>
       </div>
 

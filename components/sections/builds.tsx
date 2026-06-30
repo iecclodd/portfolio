@@ -154,17 +154,19 @@ function ProjectCard({ project: p }: { project: Project }) {
         </div>
       </div>
 
-      {/* CTA */}
+      {/* CTA — only rendered when a project has a real link */}
       <div className="mt-5 flex-1" />
-      <a
-        href={p.link || "#builds"}
-        target={p.link ? "_blank" : undefined}
-        rel={p.link ? "noopener noreferrer" : undefined}
-        className="group/btn mt-2 inline-flex w-fit items-center gap-1.5 rounded-lg border border-border bg-background/60 px-3 py-2 text-sm text-foreground transition-colors hover:border-accent-blue/50 hover:text-accent-blue"
-      >
-        Open Case Study
-        <ArrowUpRight className="h-4 w-4 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
-      </a>
+      {p.link && (
+        <a
+          href={p.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group/btn mt-2 inline-flex w-fit items-center gap-1.5 rounded-lg border border-border bg-background/60 px-3 py-2 text-sm text-foreground transition-colors hover:border-accent-blue/50 hover:text-accent-blue"
+        >
+          Visit Site
+          <ArrowUpRight className="h-4 w-4 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
+        </a>
+      )}
     </SpotlightCard>
   );
 }

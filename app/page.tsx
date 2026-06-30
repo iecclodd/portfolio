@@ -9,7 +9,7 @@ import { Roadmap } from "@/components/sections/roadmap";
 import { Transmission } from "@/components/sections/transmission";
 import { Footer } from "@/components/sections/footer";
 import { SectionDivider } from "@/components/ui/section-divider";
-import { Coffee, Bean, Croissant, Milk, Leaf, Sprout } from "lucide-react";
+import { Coffee, Bean, Croissant, Milk, Leaf, Sprout, Cherry } from "lucide-react";
 
 export default function Home() {
   return (
@@ -31,7 +31,7 @@ export default function Home() {
         <SectionDivider icon={Milk} tone="coffee" />
         <Builds />
 
-        <SectionDivider icon={Sprout} tone="matcha" />
+        <SectionDivider icon={Cherry} tone="strawberry" />
         <Capabilities />
 
         <SectionDivider icon={Croissant} tone="coffee" />

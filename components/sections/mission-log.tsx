@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
 import { experience, type MissionStatus } from "@/data/experience";
 import { Section } from "@/components/ui/section";
 import { StatusBadge } from "@/components/ui/status-badge";
@@ -89,6 +90,17 @@ export function MissionLog() {
                   <p className="mt-2 text-sm leading-relaxed text-muted">
                     {entry.description}
                   </p>
+                  {entry.link && (
+                    <a
+                      href={entry.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group/btn mt-3 inline-flex w-fit items-center gap-1.5 text-sm font-medium text-accent-blue transition-colors hover:text-accent-purple"
+                    >
+                      Visit site
+                      <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
+                    </a>
+                  )}
                 </div>
               </motion.li>
             );

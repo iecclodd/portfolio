@@ -13,16 +13,28 @@ export function SectionDivider({
   className,
 }: {
   icon?: LucideIcon;
-  tone?: "coffee" | "matcha";
+  tone?: "coffee" | "matcha" | "strawberry";
   className?: string;
 }) {
-  const isMatcha = tone === "matcha";
-  const ink = isMatcha ? "text-matcha-deep" : "text-accent-blue";
-  const steam = isMatcha ? "bg-matcha-light/50" : "bg-accent-purple/45";
-  // subtle warm/green tint so the bean & leaf icons read a touch more clearly
-  const frameTint = isMatcha
-    ? "border-matcha-soft bg-matcha-mist"
-    : "border-border bg-accent-purple/[0.06]";
+  const ink =
+    tone === "matcha"
+      ? "text-matcha-deep"
+      : tone === "strawberry"
+      ? "text-strawberry"
+      : "text-accent-blue";
+  const steam =
+    tone === "matcha"
+      ? "bg-matcha-light/50"
+      : tone === "strawberry"
+      ? "bg-strawberry-soft/60"
+      : "bg-accent-purple/45";
+  // subtle warm/green/berry tint so the center icon reads a touch more clearly
+  const frameTint =
+    tone === "matcha"
+      ? "border-matcha-soft bg-matcha-mist"
+      : tone === "strawberry"
+      ? "border-strawberry-soft bg-strawberry-mist"
+      : "border-border bg-accent-purple/[0.06]";
 
   return (
     <div

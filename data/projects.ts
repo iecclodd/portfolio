@@ -35,40 +35,56 @@ export const projects: Project[] = [
   {
     id: "polyshield",
     name: "Polyshield",
-    tagline: "Adaptive protection layer that hardens apps against abuse.",
+    tagline: "Safety layer that keeps AI agents from going rogue.",
     summary:
-      "A security layer that sits in front of an app and learns what abuse looks like. It scores traffic in real time and blocks bad actors while keeping latency low enough that real users never notice it's there.",
+      "Co-founded a security platform that stops AI agents from taking unauthorized or unsafe actions. It defines the real-time guardrails and policy workflows that let autonomous agents operate safely — without slowing them down.",
     status: "in-progress",
-    role: "Founder / Lead Engineer",
+    role: "Co-Founder",
     tools: ["Next.js", "TypeScript", "Edge Functions", "PostgreSQL"],
     metrics: [
       { label: "Threats Modeled", value: "40+" },
-      { label: "Latency", value: "<25ms" },
+      { label: "Added Latency", value: "<25ms" },
+    ],
+    link: "https://polyshield.vercel.app",
+    featured: true,
+  },
+  {
+    id: "skyes-travel",
+    name: "Skyes Travel — AI Booking",
+    tagline: "AI-assisted booking engine that runs reservations on autopilot.",
+    summary:
+      "An AI automation internship building a booking engine for a travel company. It hunts down the repetitive steps in the reservation workflow and automates them — making bookings faster, more consistent, and largely hands-free.",
+    status: "in-progress",
+    role: "AI Automation Intern",
+    tools: ["AI Workflows", "Automation", "Next.js", "APIs"],
+    metrics: [
+      { label: "Manual Work", value: "-60%" },
+      { label: "Booking Speed", value: "3x" },
+    ],
+    link: "",
+  },
+  {
+    id: "drone-autonomy",
+    name: "Autonomous Drone Navigation & Mapping",
+    tagline: "AI perception that lets off-the-shelf drones map and fly themselves.",
+    summary:
+      "Self-taught FPV drone builder — from component selection and assembly to advanced tuning and flight testing. That hardware obsession became an AI build: an autonomous navigation and mapping system that retrofits AI-driven perception onto existing drone platforms.",
+    status: "in-progress",
+    role: "Builder / Robotics",
+    tools: ["Computer Vision", "SLAM", "Python", "Embedded"],
+    metrics: [
+      { label: "High-Perf Drones Built", value: "3" },
+      { label: "Autonomy Stack", value: "SLAM + CV" },
     ],
     link: "",
     featured: true,
   },
   {
-    id: "ai-booking",
-    name: "AI Booking System",
-    tagline: "Conversational scheduling that fills calendars on autopilot.",
+    id: "vibe-engineering",
+    name: "Experimental Vibe Engineering Software",
+    tagline: "Turns plain intent into shipped, on-brand UI.",
     summary:
-      "A conversational assistant that talks to leads, answers their questions, and books them straight into a live calendar. Reminders and follow-ups run automatically, cutting no-shows without any manual work.",
-    status: "shipped",
-    role: "Builder",
-    tools: ["Next.js", "OpenAI", "Twilio", "Supabase"],
-    metrics: [
-      { label: "Bookings", value: "1.2K+" },
-      { label: "No-show Drop", value: "-31%" },
-    ],
-    link: "",
-  },
-  {
-    id: "design-engine",
-    name: "Design Generation Engine",
-    tagline: "Turns prompts into on-brand UI systems in seconds.",
-    summary:
-      "A pipeline that turns a plain-language prompt into a complete, on-brand UI system — components, tokens, and layouts. It lets one person spin up production-ready interfaces in seconds instead of days.",
+      "Experimental vibe-engineering software that turns a plain-language prompt into a complete, on-brand UI system — components, tokens, and layouts. It lets one person spin up production-ready interfaces in seconds instead of days.",
     status: "in-progress",
     role: "Designer / Engineer",
     tools: ["React", "Framer Motion", "LLM Pipelines"],
@@ -97,17 +113,32 @@ export const projects: Project[] = [
   {
     id: "media-experiments",
     name: "Content / Media Experiments",
-    tagline: "Short-form content systems testing distribution & hooks.",
+    tagline: "Early-stage content system, built on a design foundation.",
     summary:
-      "An ongoing series of short-form content experiments testing hooks, formats, and distribution. Each post is treated like a test — measured, iterated, and fed back into a repeatable content system.",
+      "A work-in-progress content system in its early innings — testing hooks, formats, and distribution, with each post treated like an experiment. Backed by years of digital design instinct and steadily scaling toward a wider audience.",
     status: "in-progress",
     role: "Creator",
     tools: ["Premiere", "Notion", "Automation"],
     metrics: [
-      { label: "Reach", value: "50K+" },
-      { label: "Posts", value: "120+" },
+      { label: "Reach", value: "Working toward 50K+" },
+      { label: "Digital Design", value: "5 Years" },
     ],
     link: "",
+  },
+  {
+    id: "mathlify-stem",
+    name: "Mathlify STEM",
+    tagline: "Free, structured STEM learning — pre-launch.",
+    summary:
+      "A pre-launch STEM education platform in active development — building free, structured STEM learning for students. Currently a work in progress ahead of its public launch.",
+    status: "in-progress",
+    role: "Builder",
+    tools: ["Next.js", "Education", "Web"],
+    metrics: [
+      { label: "Status", value: "Pre-Launch" },
+      { label: "Phase", value: "In Build" },
+    ],
+    link: "https://stem.mathlify.org",
   },
   {
     id: "nonprofit",

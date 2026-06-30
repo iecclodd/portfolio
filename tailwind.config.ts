@@ -36,6 +36,12 @@ const config: Config = {
           deep: "#5E7A2C", // steeped matcha
           dark: "#46591F", // darkest leaf
         },
+        // ── Strawberry — the quietest accent, used sparingly ─────
+        strawberry: {
+          DEFAULT: "#D26A82", // soft strawberry
+          soft: "#E7B7C2", // pale berry
+          mist: "#F7E6EA", // faintest pink wash
+        },
       },
       fontFamily: {
         sans: ["var(--font-geist-sans)", "system-ui", "sans-serif"],

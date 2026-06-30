@@ -15,52 +15,74 @@ export interface MissionEntry {
   description: string;
   status: MissionStatus;
   importance: number; // 1–5
+  link?: string; // optional external link (org site, etc.)
 }
 
 export const experience: MissionEntry[] = [
   {
-    id: "2023",
-    year: "2023",
-    title: "First Builds",
+    id: "seven-lakes",
+    year: "2024 — 2028",
+    title: "Seven Lakes High School — Engineering Diploma",
     description:
-      "Started experimenting with coding, design, and online projects.",
-    status: "complete",
-    importance: 2,
+      "Engineering-track diploma candidate carrying a founder's workload — running ventures, an internship, and officer roles across seven organizations while still in high school.",
+    status: "active",
+    importance: 3,
   },
   {
-    id: "2024",
-    year: "2024",
-    title: "Real Projects",
+    id: "cancer-research",
+    year: "2025 — 2026",
+    title: "Cancer Research Society — Co-Founder & VP",
     description:
-      "Built early tools, joined teams, and learned startup / product basics.",
+      "Co-founded and scaled a cancer-research society to 100+ members, raised $5,000+ for research, and built a direct pipeline to Baylor professors and medical mentors — putting students face-to-face with real-world oncology.",
     status: "complete",
     importance: 3,
   },
   {
-    id: "2025",
-    year: "2025",
-    title: "Systems & Scale",
+    id: "student-council",
+    year: "2025 — Present",
+    title: "SLHS Student Council — Officer (President-Elect '27)",
     description:
-      "Worked on automation, AI workflows, and end-to-end project execution.",
-    status: "complete",
+      "Lead officer behind a 600+ member organization, orchestrating $100K+ in annual fundraising and 10,000+ volunteer hours a year that fuel thousands of donated meals and supplies to local shelters. Grew active membership 50% and steps into President in 2027.",
+    status: "active",
+    importance: 5,
+    link: "https://linktr.ee/7lakesstuco",
+  },
+  {
+    id: "hearts-for-elders",
+    year: "2025 — Present",
+    title: "Hearts for Elders — Secretary & Chapter Lead",
+    description:
+      "Helped scale a senior-care nonprofit into a global network — launching chapters across the U.S., Nigeria, and Kenya and coordinating international delivery of food, hygiene, and essential supplies to underserved elderly communities.",
+    status: "active",
+    importance: 4,
+    link: "https://www.hearts4elders.org",
+  },
+  {
+    id: "mecclabs",
+    year: "2026 — Present",
+    title: "Mecclabs — Engineering Director (President-Elect '27)",
+    description:
+      "Director architecting rigorous, hands-on curriculum across five engineering disciplines — aerospace, electrical, biomedical, chemical, and mechanical — while helping generate nearly $20K through education programs. President-elect for 2027.",
+    status: "active",
     importance: 4,
   },
   {
-    id: "2026",
-    year: "2026",
-    title: "Expansion",
+    id: "tsa",
+    year: "2026 — Present",
+    title: "Technology Student Association — Officer",
     description:
-      "Focused on AI systems, portfolio building, product design, and startup-level projects.",
+      "Officer preparing 50+ competitors for regional, state, and national contests — building the guides, workshops, and mentorship that carried the chapter all the way to the TSA National Conference.",
     status: "active",
-    importance: 5,
+    importance: 3,
+    link: "https://slhstsa.wixsite.com/home",
   },
   {
-    id: "future",
-    year: "Future",
-    title: "Next Phase",
+    id: "um-research",
+    year: "May — Aug 2026",
+    title: "University of Miami — AI Research Collaborator",
     description:
-      "Bigger products, stronger skills, and more public proof of work.",
-    status: "upcoming",
+      "Collaborating with a biomedical engineering professor at the University of Miami on interpretable AI for prosthetic gesture recognition — building the analysis model and co-authoring the research abstract. Bridges machine learning, biomedical engineering, and next-generation human-computer interaction.",
+    status: "active",
     importance: 5,
   },
 ];

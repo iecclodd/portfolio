@@ -10,11 +10,11 @@
 
 import type { LucideIcon } from "lucide-react";
 import {
-  Boxes,
-  Users,
+  DollarSign,
   Clock,
-  Gauge,
+  Users,
   Network,
+  Globe,
 } from "lucide-react";
 
 export type Accent = "blue" | "purple" | "green" | "red";
@@ -33,49 +33,53 @@ export interface Stat {
 
 export const stats: Stat[] = [
   {
-    id: "projects",
-    value: 12,
-    suffix: "+",
-    label: "Projects Built",
-    explanation: "Tools, automations and products shipped end-to-end.",
-    icon: Boxes,
+    id: "raised",
+    value: 125,
+    prefix: "$",
+    suffix: "K+",
+    label: "Raised for Causes",
+    explanation:
+      "Annual fundraising driven across student council, engineering, and cancer-research programs.",
+    icon: DollarSign,
+    accent: "green",
+  },
+  {
+    id: "volunteer-hours",
+    value: 10,
+    suffix: "K+",
+    label: "Volunteer Hours Driven",
+    explanation:
+      "Service hours mobilized each year — meals, supplies, and outreach for those who need it most.",
+    icon: Clock,
     accent: "blue",
   },
   {
-    id: "reach",
-    value: 50,
-    suffix: "K+",
-    label: "Users / Views / Reach",
-    explanation: "Cumulative reach across builds, content and experiments.",
+    id: "members",
+    value: 600,
+    suffix: "+",
+    label: "Members Led",
+    explanation:
+      "Grew a single organization 50% (400 → 600+) and helps steer thousands across all roles.",
     icon: Users,
     accent: "purple",
   },
   {
-    id: "hours",
-    value: 3.1,
-    suffix: "K+",
-    decimals: 1,
-    label: "Hours Learning & Building",
-    explanation: "Deliberate practice across engineering and design.",
-    icon: Clock,
-    accent: "green",
-  },
-  {
-    id: "efficiency",
-    value: 94,
-    suffix: "%",
-    label: "Workflow Efficiency Target",
-    explanation: "Automation goal for repeatable internal processes.",
-    icon: Gauge,
+    id: "roles",
+    value: 7,
+    suffix: "+",
+    label: "Orgs Founded & Led",
+    explanation:
+      "Founder, intern, director, and officer roles run in parallel — two with President seats incoming.",
+    icon: Network,
     accent: "red",
   },
   {
-    id: "teams",
-    value: 5,
-    suffix: "+",
-    label: "Teams Collaborated With",
-    explanation: "Startups, communities and project groups.",
-    icon: Network,
-    accent: "blue",
+    id: "countries",
+    value: 4,
+    label: "Countries Reached",
+    explanation:
+      "Nonprofit chapters launched across the U.S., Nigeria, and Kenya, with more in development.",
+    icon: Globe,
+    accent: "green",
   },
 ];
