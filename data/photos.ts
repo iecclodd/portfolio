@@ -30,9 +30,29 @@ export const heroSecondary: Photo = {
 
 /** Gallery shown in the About / Interests section. */
 export const gallery: Photo[] = [
-  { src: "/photos/life-1.jpg", alt: "Building", caption: "In the workshop" },
-  { src: "/photos/life-2.jpg", alt: "Outdoors", caption: "Off the clock" },
-  { src: "/photos/life-3.jpg", alt: "Training", caption: "Training" },
-  { src: "/photos/life-4.jpg", alt: "Travel", caption: "On the move" },
-  { src: "/photos/life-5.jpg", alt: "Drones", caption: "Drone tinkering" },
+  {
+    src: "/photos/drone-build.jpg",
+    alt: "FPV drone build on the workbench",
+    caption: "Building FPV drones",
+  },
+  {
+    src: "/photos/robotics.jpg",
+    alt: "Competition robot on the field",
+    caption: "Robotics competition",
+  },
+  {
+    src: "/photos/speed-climbing.jpg",
+    alt: "Climbing a competition speed wall",
+    caption: "Speed climbing",
+  },
+  {
+    src: "/photos/awards.jpg",
+    alt: "Rally winner plaques",
+    caption: "Award-winning builds",
+  },
+  {
+    src: "/photos/card-collection.jpg",
+    alt: "Trading card collection",
+    caption: "Card collecting",
+  },
 ];
