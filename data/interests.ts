@@ -27,6 +27,8 @@ import {
   Camera,
   Hammer,
   Terminal,
+  Mountain,
+  Timer,
 } from "lucide-react";
 
 export interface Tagged {
@@ -45,6 +47,8 @@ export const overview: string[] = [
 ]; // ← edit these paragraphs to tell your own story
 
 export const hobbies: Tagged[] = [
+  { label: "Rock climbing", icon: Mountain },
+  { label: "Competitive speed climbing", icon: Timer },
   { label: "Building side projects", icon: Hammer },
   { label: "Fitness & training", icon: Dumbbell },
   { label: "Drones / robotics", icon: Plane },

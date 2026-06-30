@@ -27,7 +27,7 @@ export const profile: Profile = {
   status: "ACTIVE",
   role: "BUILDER",
   focus: ["AI", "AUTOMATION", "SYSTEMS"],
-  location: "EARTH",
+  location: "Richmond, TX",
   resumeUrl: "/resume.pdf",
   bootSequence: [
     "INITIALIZING AZAAN.SYSTEM...",

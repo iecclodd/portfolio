@@ -140,19 +140,4 @@ export const projects: Project[] = [
     ],
     link: "https://stem.mathlify.org",
   },
-  {
-    id: "nonprofit",
-    name: "Nonprofit / Community Work",
-    tagline: "Volunteer tooling and outreach for local initiatives.",
-    summary:
-      "Volunteer tooling and outreach for local community initiatives — simple sites, sign-up flows, and automations that help small teams reach more people with far less overhead.",
-    status: "planned",
-    role: "Organizer / Builder",
-    tools: ["Web", "Forms", "Automation"],
-    metrics: [
-      { label: "People", value: "300+" },
-      { label: "Events", value: "8" },
-    ],
-    link: "",
-  },
 ];

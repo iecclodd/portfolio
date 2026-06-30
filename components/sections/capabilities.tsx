@@ -29,9 +29,9 @@ export function Capabilities() {
   return (
     <Section
       id="capabilities"
-      kicker="What I work with"
-      title="Skills & Tools"
-      subtitle="The stack behind the work — with a sense of where I'm strongest and the projects that prove it."
+      kicker="What I bring"
+      title="Skills & Strengths"
+      subtitle="Hands-on engineering and the people skills behind the work — with the projects and roles that prove it."
     >
       <Stagger className="grid grid-cols-1 gap-4 md:grid-cols-2">
         {skills.map((cat) => (
