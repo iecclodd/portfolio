@@ -42,9 +42,10 @@ export interface Principle {
 }
 
 export const overview: string[] = [
-  "I'm a builder at heart. I learn by making things and shipping them, and most of my time goes into AI systems, automation, and product design. What I really enjoy is taking a messy, manual problem and turning it into a clean, repeatable system — something that keeps working long after I've stepped away from it. I care less about how clever a solution looks and more about whether it actually holds up in the real world.",
-  "Outside of building, I'm into fitness, drones and robotics, and figuring out why people do what they do. Those interests feed back into the work more than you'd think: training teaches consistency, hardware teaches patience, and psychology shapes how I design things people actually want to use. This page is a living blueprint of where I've been and where I'm headed — and it'll keep changing as I do.",
-]; // ← edit these paragraphs to tell your own story
+  "When people first meet me, they notice the projects: the software, the prototypes, the fundraisers, the clubs, the ideas that multiply faster than I can finish them. But the projects aren't the story. They're the byproduct of how I think, and they only tell you so much about who I actually am. I'm a builder and an engineer, but I'm also a good friend, the guy who talks too much, and someone who has failed and rebuilt more than once. We're all more than what we make, and I've learned the failures deserve as much respect as the wins. They're what shaped me.",
+  "What ties it together is that I'm drawn to systems. Machine, organization, or business, I ask the same questions: why does it work this way, what's inefficient, and how could it be rebuilt better? I've always loved the idea of autonomy too. Not the cold sci-fi version that strips away humanity, but the kind that took us from man building machine to machine building for man. That instinct has sent me down a lot of paths: carpentry and soldering, leading teams and fundraisers, and lately startups, because they're the fastest way to turn an observation into real impact.",
+  "I don't wait until I'm an expert to start. I learn by doing, and every project becomes another way to stretch what I'm capable of. Looking ahead, I want to build technology that reaches millions, especially at the intersection of AI, security, and engineering. My goal isn't the title; it's to become someone who sees the hard problems other people walk past and quietly makes them disappear. At my core, I just love to build, and everything else follows from that.",
+];
 
 export const hobbies: Tagged[] = [
   { label: "Rock climbing", icon: Mountain },

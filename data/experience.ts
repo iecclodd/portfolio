@@ -65,6 +65,7 @@ export const experience: MissionEntry[] = [
       "Director architecting rigorous, hands-on curriculum across five engineering disciplines — aerospace, electrical, biomedical, chemical, and mechanical — while helping generate nearly $20K through education programs. President-elect for 2027.",
     status: "active",
     importance: 4,
+    link: "https://www.mecclabs.com",
   },
   {
     id: "tsa",
