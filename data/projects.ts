@@ -120,7 +120,7 @@ export const projects: Project[] = [
     role: "Creator",
     tools: ["Premiere", "Notion", "Automation"],
     metrics: [
-      { label: "Reach", value: "Working toward 50K+" },
+      { label: "Reach", value: "Scaling up" },
       { label: "Digital Design", value: "5 Years" },
     ],
     link: "",

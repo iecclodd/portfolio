@@ -33,7 +33,7 @@ export const experience: MissionEntry[] = [
     year: "2025 — Present",
     title: "SLHS Student Council — Officer",
     description:
-      "Lead officer behind a 600+ member organization, orchestrating $100K+ in annual fundraising and 10,000+ volunteer hours a year that fuel thousands of donated meals and supplies to local shelters. Grew active membership 50%.",
+      "Lead officer behind a 600+ member organization, orchestrating $100K+ in annual fundraising and 10,000+ volunteer hours a year that fuel thousands of donated meals and supplies to local shelters.",
     status: "active",
     importance: 5,
     link: "https://linktr.ee/7lakesstuco",
