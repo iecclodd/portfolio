@@ -51,7 +51,7 @@ export const experience: MissionEntry[] = [
   {
     id: "mecclabs",
     year: "2026 — Present",
-    title: "Mecclabs — Engineering Director",
+    title: "Mecclabs — Mechanical Co-Director",
     description:
       "Director architecting rigorous, hands-on curriculum across five engineering disciplines — aerospace, electrical, biomedical, chemical, and mechanical — while helping generate nearly $20K through education programs.",
     status: "active",
