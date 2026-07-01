@@ -70,14 +70,6 @@ export const roadmap: Objective[] = [
     progress: 55,
   },
   {
-    id: "president-2027",
-    label: "Step into President of Student Council & Mecclabs",
-    status: "active",
-    priority: "high",
-    target: "2027",
-    progress: 45,
-  },
-  {
     id: "scale-nonprofit",
     label: "Scale Hearts for Elders into new countries",
     status: "active",

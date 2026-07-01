@@ -31,9 +31,9 @@ export const experience: MissionEntry[] = [
   {
     id: "student-council",
     year: "2025 — Present",
-    title: "SLHS Student Council — Officer (President-Elect '27)",
+    title: "SLHS Student Council — Officer",
     description:
-      "Lead officer behind a 600+ member organization, orchestrating $100K+ in annual fundraising and 10,000+ volunteer hours a year that fuel thousands of donated meals and supplies to local shelters. Grew active membership 50% and steps into President in 2027.",
+      "Lead officer behind a 600+ member organization, orchestrating $100K+ in annual fundraising and 10,000+ volunteer hours a year that fuel thousands of donated meals and supplies to local shelters. Grew active membership 50%.",
     status: "active",
     importance: 5,
     link: "https://linktr.ee/7lakesstuco",
@@ -51,9 +51,9 @@ export const experience: MissionEntry[] = [
   {
     id: "mecclabs",
     year: "2026 — Present",
-    title: "Mecclabs — Engineering Director (President-Elect '27)",
+    title: "Mecclabs — Engineering Director",
     description:
-      "Director architecting rigorous, hands-on curriculum across five engineering disciplines — aerospace, electrical, biomedical, chemical, and mechanical — while helping generate nearly $20K through education programs. President-elect for 2027.",
+      "Director architecting rigorous, hands-on curriculum across five engineering disciplines — aerospace, electrical, biomedical, chemical, and mechanical — while helping generate nearly $20K through education programs.",
     status: "active",
     importance: 4,
     link: "https://www.mecclabs.com",

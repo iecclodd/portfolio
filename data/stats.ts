@@ -69,7 +69,7 @@ export const stats: Stat[] = [
     suffix: "+",
     label: "Orgs Founded & Led",
     explanation:
-      "Founder, intern, director, and officer roles run in parallel — two with President seats incoming.",
+      "Founder, intern, director, and officer roles run in parallel across seven organizations.",
     icon: Network,
     accent: "red",
   },
