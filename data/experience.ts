@@ -30,7 +30,7 @@ export const experience: MissionEntry[] = [
   },
   {
     id: "cancer-research",
-    year: "2025 — 2026",
+    year: "2025 — Jan 2026",
     title: "Cancer Research Society — Co-Founder & VP",
     description:
       "Co-founded and scaled a cancer-research society to 100+ members, raised $5,000+ for research, and built a direct pipeline to Baylor professors and medical mentors — putting students face-to-face with real-world oncology.",
