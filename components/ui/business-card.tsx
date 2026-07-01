@@ -232,20 +232,30 @@ function CardBack() {
       <div className="grid min-h-0 flex-1 content-center gap-2.5 overflow-y-auto [-webkit-overflow-scrolling:touch] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         {contact.channels.map((ch) => {
           const Icon = ch.icon;
+          const external = ch.href.startsWith("http");
           return (
-            <div key={ch.id} className="flex items-center gap-3">
-              <span className="grid h-8 w-8 shrink-0 place-items-center rounded-lg border border-border bg-card text-accent-green">
+            <a
+              key={ch.id}
+              href={ch.href}
+              onClick={(e) => e.stopPropagation()}
+              {...(external
+                ? { target: "_blank", rel: "noopener noreferrer" }
+                : {})}
+              aria-label={ch.label}
+              className="group/ch flex items-center gap-3 rounded-lg transition-colors hover:text-accent-green"
+            >
+              <span className="grid h-8 w-8 shrink-0 place-items-center rounded-lg border border-border bg-card text-accent-green transition-colors group-hover/ch:border-accent-green/50">
                 <Icon className="h-4 w-4" />
               </span>
               <div className="min-w-0">
                 <div className="text-[0.7rem] uppercase tracking-wider text-muted">
                   {ch.label}
                 </div>
-                <div className="truncate text-sm font-medium text-foreground">
+                <div className="truncate text-sm font-medium text-foreground transition-colors group-hover/ch:text-accent-green">
                   {ch.value}
                 </div>
               </div>
-            </div>
+            </a>
           );
         })}
       </div>
