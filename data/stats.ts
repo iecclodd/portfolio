@@ -11,7 +11,6 @@
 import type { LucideIcon } from "lucide-react";
 import {
   DollarSign,
-  Clock,
   Users,
   Network,
   Globe,
@@ -42,16 +41,6 @@ export const stats: Stat[] = [
       "Annual fundraising driven across student council and engineering programs.",
     icon: DollarSign,
     accent: "green",
-  },
-  {
-    id: "volunteer-hours",
-    value: 10,
-    suffix: "K+",
-    label: "Volunteer Hours Driven",
-    explanation:
-      "Service hours mobilized each year — meals, supplies, and outreach for those who need it most.",
-    icon: Clock,
-    accent: "blue",
   },
   {
     id: "members",
