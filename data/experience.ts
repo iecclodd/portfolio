@@ -22,9 +22,9 @@ export const experience: MissionEntry[] = [
   {
     id: "seven-lakes",
     year: "2024 — 2028",
-    title: "Seven Lakes High School — Engineering Diploma",
+    title: "Seven Lakes High School",
     description:
-      "Engineering-track diploma candidate carrying a founder's workload — running ventures, an internship, and officer roles across seven organizations while still in high school.",
+      "Carrying a founder's workload while still in high school — running ventures, an internship, and officer roles across seven organizations.",
     status: "active",
     importance: 3,
   },
