@@ -29,15 +29,6 @@ export const experience: MissionEntry[] = [
     importance: 3,
   },
   {
-    id: "cancer-research",
-    year: "2025 — Jan 2026",
-    title: "Cancer Research Society — Co-Founder & VP",
-    description:
-      "Co-founded and scaled a cancer-research society to 100+ members, raised $5,000+ for research, and built a direct pipeline to Baylor professors and medical mentors — putting students face-to-face with real-world oncology.",
-    status: "complete",
-    importance: 3,
-  },
-  {
     id: "student-council",
     year: "2025 — Present",
     title: "SLHS Student Council — Officer (President-Elect '27)",

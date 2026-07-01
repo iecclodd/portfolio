@@ -39,7 +39,7 @@ export const stats: Stat[] = [
     suffix: "K+",
     label: "Raised for Causes",
     explanation:
-      "Annual fundraising driven across student council, engineering, and cancer-research programs.",
+      "Annual fundraising driven across student council and engineering programs.",
     icon: DollarSign,
     accent: "green",
   },
