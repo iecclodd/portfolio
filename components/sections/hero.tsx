@@ -10,6 +10,7 @@ import { WordRotate } from "@/components/ui/word-rotate";
 import { Magnetic } from "@/components/ui/magnetic";
 import { StatusBadge } from "@/components/ui/status-badge";
 import { TerminalConsole } from "@/components/sections/terminal";
+import { Mascot } from "@/components/ui/mascot";
 
 export function Hero() {
   return (
@@ -110,6 +111,9 @@ export function Hero() {
                 Get in Touch
               </a>
             </Magnetic>
+
+            {/* lil cup buddy tags along with the CTAs */}
+            <Mascot className="ml-2 w-16 sm:w-[4.5rem]" />
           </motion.div>
         </div>
 

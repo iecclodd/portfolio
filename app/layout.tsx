@@ -121,6 +121,12 @@ export default function RootLayout({
       className={`${GeistSans.variable} ${GeistMono.variable}`}
     >
       <head>
+        {/* Restore the visitor's saved brew before first paint */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{var b=localStorage.getItem("brew");if(b==="matcha"||b==="strawberry")document.documentElement.setAttribute("data-brew",b)}catch(e){}`,
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}

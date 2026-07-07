@@ -32,9 +32,14 @@ export function Footer() {
           <Coffee className="h-4 w-4 text-accent-blue" />© {new Date().getFullYear()}{" "}
           {profile.name}
         </span>
-        <span className="flex items-center gap-1.5">
-          Built with <Heart className="h-3.5 w-3.5 text-accent-red" /> and a lot
-          of coffee
+        <span className="flex flex-col items-center gap-1 sm:items-end">
+          <span className="flex items-center gap-1.5">
+            Built with <Heart className="h-3.5 w-3.5 text-accent-red" /> and a
+            lot of coffee
+          </span>
+          <span className="font-mono text-[0.65rem] uppercase tracking-widest text-muted/70">
+            psst — try typing &ldquo;brew&rdquo;
+          </span>
         </span>
       </div>
     </footer>

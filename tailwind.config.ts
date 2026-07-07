@@ -16,17 +16,19 @@ const config: Config = {
     },
     extend: {
       colors: {
-        // ── Cream & Coffee palette ───────────────────────────────
-        background: "#F4EDE2", // warm cream paper
-        card: "#FBF6EC", // latte foam (lighter than bg)
-        border: "#E6D7C3", // soft tan hairline
-        foreground: "#3A2A20", // espresso ink
-        muted: "#8C7A67", // mocha / latte muted text
+        // ── Brew-aware palette ───────────────────────────────────
+        // Channels live in globals.css; [data-brew] on <html> swaps
+        // the whole scheme (espresso / matcha / strawberry).
+        background: "rgb(var(--c-background) / <alpha-value>)",
+        card: "rgb(var(--c-card) / <alpha-value>)",
+        border: "rgb(var(--c-border) / <alpha-value>)",
+        foreground: "rgb(var(--c-foreground) / <alpha-value>)",
+        muted: "rgb(var(--c-muted) / <alpha-value>)",
         accent: {
-          blue: "#6F4E37", // espresso — primary
-          purple: "#A9744C", // caramel — secondary
-          green: "#7C9A3C", // matcha — co-primary / positive
-          red: "#BC6A4B", // terracotta — alert
+          blue: "rgb(var(--c-accent-1) / <alpha-value>)", // primary
+          purple: "rgb(var(--c-accent-2) / <alpha-value>)", // secondary
+          green: "rgb(var(--c-accent-3) / <alpha-value>)", // co-primary
+          red: "rgb(var(--c-accent-4) / <alpha-value>)", // alert
         },
         matcha: {
           DEFAULT: "#7C9A3C", // matcha

@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X, Coffee } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { BrewPicker } from "@/components/ui/brew-picker";
 
 const links = [
   { label: "Home", href: "#system" },
@@ -11,6 +12,7 @@ const links = [
   { label: "Experience", href: "#mission-log" },
   { label: "Work", href: "#builds" },
   { label: "Skills", href: "#capabilities" },
+  { label: "Fidgets", href: "#fidget" },
   { label: "About", href: "#more" },
   { label: "Roadmap", href: "#roadmap" },
   { label: "Contact", href: "#transmission" },
@@ -83,6 +85,9 @@ export function Navbar() {
         </ul>
 
         <div className="flex items-center gap-3">
+          {/* order a brew — live theme switcher */}
+          <BrewPicker className="hidden sm:flex" />
+
           {/* primary CTA */}
           <a
             href="#transmission"
@@ -124,6 +129,12 @@ export function Navbar() {
                 </li>
               ))}
             </ul>
+            <div className="mt-2 flex items-center justify-between border-t border-border px-3 pt-3 sm:hidden">
+              <span className="font-mono text-[0.65rem] uppercase tracking-widest text-muted">
+                Order a brew
+              </span>
+              <BrewPicker />
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

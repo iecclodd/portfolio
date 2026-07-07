@@ -2,16 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+ * THEME CHANNELS
+ * ------------------------------------------------------------------
+ * Every core color is an RGB channel triplet so Tailwind classes
+ * (bg-accent-blue/15 etc.) AND raw CSS can follow the active "brew".
+ * The brew is set as data-brew on <html> by the BrewPicker.
+ */
 :root {
-  --background: #f4ede2;
-  --card: #fbf6ec;
-  --border: #e6d7c3;
-  --foreground: #3a2a20;
-  --muted: #8c7a67;
-  --accent-blue: #6f4e37; /* espresso */
-  --accent-purple: #a9744c; /* caramel */
-  --accent-green: #7c9a3c; /* matcha */
-  --accent-red: #bc6a4b; /* terracotta */
+  /* ── Espresso (default brew) ── */
+  --c-background: 244 237 226;
+  --c-card: 251 246 236;
+  --c-border: 230 215 195;
+  --c-foreground: 58 42 32;
+  --c-muted: 140 122 103;
+  --c-accent-1: 111 78 55; /* primary — espresso */
+  --c-accent-2: 169 116 76; /* secondary — caramel */
+  --c-accent-3: 124 154 60; /* co-primary — matcha */
+  --c-accent-4: 188 106 75; /* alert — terracotta */
+
+  /* legacy aliases used directly in CSS */
+  --background: rgb(var(--c-background));
+  --card: rgb(var(--c-card));
+  --border: rgb(var(--c-border));
+  --foreground: rgb(var(--c-foreground));
+  --muted: rgb(var(--c-muted));
+  --accent-blue: rgb(var(--c-accent-1));
+  --accent-purple: rgb(var(--c-accent-2));
+  --accent-green: rgb(var(--c-accent-3));
+  --accent-red: rgb(var(--c-accent-4));
   --matcha: #7c9a3c;
   --matcha-mist: #edf2de;
   --matcha-soft: #d4e0b0;
@@ -21,6 +40,42 @@
   --strawberry: #d26a82;
   --strawberry-soft: #e7b7c2;
   --strawberry-mist: #f7e6ea;
+}
+
+/* ── Matcha latte brew ── */
+[data-brew="matcha"] {
+  --c-background: 238 242 226;
+  --c-card: 248 250 240;
+  --c-border: 214 222 190;
+  --c-foreground: 46 56 28;
+  --c-muted: 120 132 94;
+  --c-accent-1: 94 122 44; /* steeped matcha */
+  --c-accent-2: 157 186 90; /* bright leaf */
+  --c-accent-3: 111 78 55; /* espresso becomes the co-accent */
+  --c-accent-4: 210 106 130; /* strawberry alert */
+}
+
+/* ── Strawberry milk brew ── */
+[data-brew="strawberry"] {
+  --c-background: 249 238 241;
+  --c-card: 253 246 248;
+  --c-border: 238 213 220;
+  --c-foreground: 76 42 52;
+  --c-muted: 158 118 130;
+  --c-accent-1: 199 77 108; /* deep berry */
+  --c-accent-2: 210 106 130; /* soft strawberry */
+  --c-accent-3: 124 154 60; /* matcha stays for freshness */
+  --c-accent-4: 111 78 55; /* espresso alert */
+}
+
+/* smooth color morph while switching brews */
+.brew-transition,
+.brew-transition *,
+.brew-transition *::before,
+.brew-transition *::after {
+  transition: background-color 600ms ease, border-color 600ms ease,
+    color 600ms ease, fill 600ms ease, stroke 600ms ease,
+    box-shadow 600ms ease !important;
 }
 
 * {
@@ -41,27 +96,27 @@ body {
   overflow-x: hidden;
 }
 
-/* Warm coffee selection */
+/* Warm selection that follows the brew */
 ::selection {
-  background: rgba(111, 78, 55, 0.18);
-  color: #3a2a20;
+  background: rgb(var(--c-accent-1) / 0.18);
+  color: rgb(var(--c-foreground));
 }
 
-/* Scrollbar — warm latte */
+/* Scrollbar — follows the brew */
 ::-webkit-scrollbar {
   width: 11px;
   height: 11px;
 }
 ::-webkit-scrollbar-track {
-  background: #f4ede2;
+  background: rgb(var(--c-background));
 }
 ::-webkit-scrollbar-thumb {
-  background: #d8c5ac;
+  background: rgb(var(--c-border));
   border-radius: 9999px;
-  border: 3px solid #f4ede2;
+  border: 3px solid rgb(var(--c-background));
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #c2a988;
+  background: rgb(var(--c-accent-2) / 0.6);
 }
 
 @layer utilities {
@@ -74,29 +129,95 @@ body {
     text-wrap: balance;
   }
 
-  /* Espresso → caramel → matcha headline gradient */
+  /* Headline gradient — follows the brew */
   .text-gradient {
     background: linear-gradient(
       115deg,
-      #3a2a20 0%,
-      #6f4e37 32%,
-      #a9744c 58%,
-      #7c9a3c 100%
+      rgb(var(--c-foreground)) 0%,
+      rgb(var(--c-accent-1)) 32%,
+      rgb(var(--c-accent-2)) 58%,
+      rgb(var(--c-accent-3)) 100%
     );
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
   }
 
-  /* Soft warm lift used on key cards */
+  /* Hard cel "lift" used on key cards */
   .glow-coffee {
-    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) inset,
-      0 18px 40px -22px rgba(111, 78, 55, 0.4);
+    box-shadow: 6px 6px 0 rgb(var(--c-foreground) / 0.16);
   }
 
   .glass {
-    background: rgba(251, 246, 236, 0.72);
-    backdrop-filter: blur(14px) saturate(150%);
-    -webkit-backdrop-filter: blur(14px) saturate(150%);
+    background: rgb(var(--c-card) / 0.85);
+    backdrop-filter: blur(8px) saturate(140%);
+    -webkit-backdrop-filter: blur(8px) saturate(140%);
+  }
+}
+
+/* ── Cel shading ────────────────────────────────────────────────────
+ * Comic-book treatment: every bordered element gets a bold ink
+ * outline, soft blurs become hard offset shadows, and the airbrushed
+ * background blobs flatten into cel washes.
+ */
+main [class~="border"],
+header [class~="border"] {
+  border-width: 2px;
+  border-color: rgb(var(--c-foreground) / 0.6);
+}
+
+/* soft shadows → hard comic offsets */
+.shadow-sm,
+.shadow,
+.shadow-md,
+.shadow-lg,
+.shadow-xl {
+  box-shadow: 4px 4px 0 rgb(var(--c-foreground) / 0.18);
+}
+
+/* flatten the giant airbrush blobs into flat color spots */
+main [class*="blur-["] {
+  filter: none;
+  opacity: 0.55;
+}
+
+/* ── Marquee ticker ─────────────────────────────────────────────── */
+@keyframes marquee-scroll {
+  to {
+    transform: translateX(-50%);
+  }
+}
+.marquee-track {
+  animation: marquee-scroll var(--marquee-duration, 32s) linear infinite;
+  will-change: transform;
+}
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* ── Caffeinated jitter (fidget bar) ────────────────────────────── */
+@keyframes caffeine-jitter {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(0.6px, -0.6px) rotate(0.25deg);
+  }
+  50% {
+    transform: translate(-0.5px, 0.4px) rotate(-0.25deg);
+  }
+  75% {
+    transform: translate(0.4px, 0.6px) rotate(0.15deg);
+  }
+}
+.caffeinated {
+  animation: caffeine-jitter 0.18s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track,
+  .caffeinated {
+    animation: none;
   }
 }
