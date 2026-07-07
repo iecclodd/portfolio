@@ -11,7 +11,6 @@ import { Footer } from "@/components/sections/footer";
 import { FidgetBar } from "@/components/sections/fidget-bar";
 import { SectionDivider } from "@/components/ui/section-divider";
 import { Marquee } from "@/components/ui/marquee";
-import { CursorTrail } from "@/components/ui/cursor-trail";
 import { ScrollCup } from "@/components/ui/scroll-cup";
 import { BrewRain } from "@/components/ui/brew-rain";
 import { Coffee, Bean, Croissant, Milk, Leaf, Sprout, Cherry } from "lucide-react";
@@ -22,8 +21,7 @@ export default function Home() {
       {/* faint paper grain over everything */}
       <div className="pointer-events-none fixed inset-0 z-0 noise-overlay opacity-[0.04]" />
 
-      {/* ambient toys: ink cursor trail, fill-as-you-scroll cup, "brew" easter egg */}
-      <CursorTrail />
+      {/* ambient toys: fill-as-you-scroll cup, "brew" easter egg */}
       <ScrollCup />
       <BrewRain />
 
